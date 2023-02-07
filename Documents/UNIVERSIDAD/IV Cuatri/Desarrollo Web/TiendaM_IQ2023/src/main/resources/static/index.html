@@ -1,25 +1,101 @@
 
-<html>
+<html lang="es">
     <head>
         <title>Tienda en línea</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página de la lección 2"/>
+        <meta name="keywords" content="html5, css, web, fidélitas"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        
     </head>
     <body>
-        <div>
-            <h1 style="text-aligne: center;">Home</h1>
-            <p>Bienvenidos al curdo de Desarrollo Web y aplicaciones</p>
-        </div>
+        <!<!-- Indica al navegador que es un encabezado -->
+        <header id="encabezado">
+            <h1>Tienda en línea</h1>
+            <br>
+            <br>
+        </header>
+        <nav id="menu">
+            <a href="ejemplo9.html">Atrás</a>
+            <a href="index.html">HOME</a>
+            <a href="ejemplo1.html">Adelante</a>
+        </nav>
+
+        <aside id="barraLateral">
+            <h2>Productos mas vendidos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pharetra, conubia dictum nascetur parturient quisque nostra porta tellus, odio purus phasellus aliquet elementum felis erat. Eros semper mauris curabitur cubilia sed massa purus feugiat nascetur, vestibulum nibh habitasse justo maecenas odio sociis viverra etiam, class suscipit magnis praesent morbi venenatis cras imperdiet. Eget diam facilisis rhoncus blandit class porttitor convallis ante, semper nec etiam sodales interdum erat habitasse, viverra luctus placerat massa magna id primis. Erat tempor consequat conubia volutpat curae porttitor phasellus vel, tristique laoreet lectus taciti pretium nascetur parturient, class proin condimentum eu lobortis sodales vehicula.</p>
+        </aside>
+
+        <section id="contenido">
+            <h2>Artículos mas vendidos</h2>
+            <article>
+                <header>Asus Vivobook</header>
+                <p>Duis inceptos natoque primis orci habitasse varius donec quis, faucibus aenean auctor cum ridiculus sociosqu tellus, eu purus nostra ullamcorper mollis consequat torquent. Tempor ridiculus fames convallis varius dui urna, felis velit donec duis cum, primis fusce parturient imperdiet ullamcorper. Eros rhoncus tempor dui primis eget aliquam sapien cubilia himenaeos class curae, nullam fames fermentum turpis fringilla felis est habitasse euismod congue id leo, volutpat sociosqu faucibus dapibus augue montes gravida nostra tristique eleifend.</p>
+                <figure>
+                    <img src="images/image2.jpg" alt="Asus Vivobook" width="200" />
+                    <figcaption>Imágen con fines ilustrativos</figcaption>
+                </figure>
+            </article>
+            
+            <article>
+                <header>Alienware ATD 900</header>
+                <p>Duis inceptos natoque primis orci habitasse varius donec quis, faucibus aenean auctor cum ridiculus sociosqu tellus, eu purus nostra ullamcorper mollis consequat torquent. Tempor ridiculus fames convallis varius dui urna, felis velit donec duis cum, primis fusce parturient imperdiet ullamcorper. Eros rhoncus tempor dui primis eget aliquam sapien cubilia himenaeos class curae, nullam fames fermentum turpis fringilla felis est habitasse euismod congue id leo, volutpat sociosqu faucibus dapibus augue montes gravida nostra tristique eleifend.</p>
+                <figure>
+                    <img src="images/image3.jpg" alt="Alienware ATD 900" width="200" />
+                    <figcaption>Más vendido</figcaption>
+                </figure>
+            </article>
+            
+            <article>
+                <header>Impresora 3D</header>
+                <p>Duis inceptos natoque primis orci habitasse varius donec quis, faucibus aenean auctor cum ridiculus sociosqu tellus, eu purus nostra ullamcorper mollis consequat torquent. Tempor ridiculus fames convallis varius dui urna, felis velit donec duis cum, primis fusce parturient imperdiet ullamcorper. Eros rhoncus tempor dui primis eget aliquam sapien cubilia himenaeos class curae, nullam fames fermentum turpis fringilla felis est habitasse euismod congue id leo, volutpat sociosqu faucibus dapibus augue montes gravida nostra tristique eleifend.</p>
+                <figure>
+                    <img src="images/image4.jpg" alt="Impresora 3D" width="200" />
+                    <figcaption>Más económico</figcaption>
+                </figure>
+            </article>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            <article>
+                <header>Líneas de productos</header>
+                <table border="0">
+                    <thead id="encabezadotabla">
+                        <tr>
+                            <th>Código</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaResumen">
+                        <tr>
+                            <td>1</td>
+                            <td>Teclados</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Monitores</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Pantallas</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Periféricos</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Accesorios</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <br>
+            <br>
+        </section>
         
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pharetra, conubia dictum nascetur parturient quisque nostra porta tellus, odio purus phasellus aliquet elementum felis erat. Eros semper mauris curabitur cubilia sed massa purus feugiat nascetur, vestibulum nibh habitasse justo maecenas odio sociis viverra etiam, class suscipit magnis praesent morbi venenatis cras imperdiet. Eget diam facilisis rhoncus blandit class porttitor convallis ante, semper nec etiam sodales interdum erat habitasse, viverra luctus placerat massa magna id primis. Erat tempor consequat conubia volutpat curae porttitor phasellus vel, tristique laoreet lectus taciti pretium nascetur parturient, class proin condimentum eu lobortis sodales vehicula.</p>
-        <p>Duis inceptos natoque primis orci habitasse varius donec quis, faucibus aenean auctor cum ridiculus sociosqu tellus, eu purus nostra ullamcorper mollis consequat torquent. Tempor ridiculus fames convallis varius dui urna, felis velit donec duis cum, primis fusce parturient imperdiet ullamcorper. Eros rhoncus tempor dui primis eget aliquam sapien cubilia himenaeos class curae, nullam fames fermentum turpis fringilla felis est habitasse euismod congue id leo, volutpat sociosqu faucibus dapibus augue montes gravida nostra tristique eleifend.</p>
-        <p>Hac dui fringilla malesuada sagittis proin montes tincidunt pretium sollicitudin rhoncus bibendum blandit facilisis, gravida hendrerit magnis senectus urna est taciti cum class laoreet mollis placerat, vestibulum nisi enim volutpat primis in mus potenti mi phasellus dignissim quam. Condimentum montes feugiat est felis urna porttitor morbi sodales, maecenas torquent accumsan dignissim quisque arcu nibh etiam, vestibulum tristique netus dictum integer sagittis leo. Fringilla tincidunt gravida ullamcorper senectus id ac feugiat, justo nunc porttitor semper vestibulum augue cursus, quis nascetur penatibus neque placerat cras.</p>
-        
-        <br>
-        <br>
-        <br>
-        
-        <p>Última Línea ...</p>
+        <footer id="piePagina">Derechos Reservados &COPY; 2023 <address>Belen, Heredia</address><address>Tel: 85889822</address></footer>
         
     </body>
 </html>
