@@ -1,0 +1,58 @@
+#encabezado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: white;
+    color: white;
+    padding-left: 15px;
+}
+
+#menu {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    height: 4%;
+    width: 100%;
+    background-color: lightsalmon;
+    color: black;
+    padding-left: 15px;
+}
+
+#menu a:visited {
+    color: navy;
+}
+
+#menu a:hover {
+    background-color: fuchsia;
+    color: white;
+}
+
+#contenido {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    height: 81%;
+    width: 100%;
+    background-color: plum;
+    color: white;
+    padding-left: 15px;
+    overflow: auto;
+    font-family: sans-serif;
+    padding: 45px 20px 0px;
+}
+
+#valores{
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    height: 81%;
+    width: 100%;
+    background-color: plum;
+    color: black;
+    overflow: auto;
+    font-family: sans-serif;
+    padding: 45px 20px 0px;
+    text-align: center;
+}
