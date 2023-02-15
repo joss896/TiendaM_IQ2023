@@ -9,5 +9,4 @@ public class TiendaMIq2023Application {
 	public static void main(String[] args) {
 		SpringApplication.run(TiendaMIq2023Application.class, args);
 	}
-
 }
