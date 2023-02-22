@@ -36,5 +36,7 @@ public class ClienteServiceImpl implements ClienteService {
     public void delete(Cliente cliente) {
         clienteDao.deleteById(cliente.getIdCliente());
     }
+    
+    
 
 }
