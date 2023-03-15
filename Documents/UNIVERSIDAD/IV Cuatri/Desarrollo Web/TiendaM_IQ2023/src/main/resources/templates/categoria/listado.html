@@ -1,15 +1,36 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>TechShop</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <header th:replace="layout/platilla :: header" />
+        <div class="contenido">
+            <h2>Listado de clientes</h2>
+            <a th:href="@{/categoria/nueva}">Nueva categoria</a>
+            <div th:if="${categorias != null and !categorias.empty}">
+                <table border = "1">
+                    <thead>
+                        <tr>
+                            <th>Descripcion</th>
+                            <th>Activa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="item : ${categoria}">
+                            <td th:text="${categoria.descripcion}"></td>
+                            <td><input type="checkbox" name="activa" th:checked="${categoria.activo}" disable="true"></td>
+                            <td><a th:href="@{/categoria/eliminar/} + ${item.idCategoria}">Eliminar</a></td>
+                            <td><a th:href="@{/categoria/modificar/} + ${item.idCategoria}">Modificar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:if="${clientes == null or clientes.empty}">
+                No tenemos clientes que mostrar...
+            </div> 
+            <footer th:replace="layout/platilla :: footer" />
     </body>
 </html>

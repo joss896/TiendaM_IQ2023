@@ -1,15 +1,40 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TODO supply a title</title>
+        <title>TechShop</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <header th:replace="layout/platilla :: header" />
+        <div class="contenido">
+            <h2>Listado de articulos</h2>
+            <a th:href="@{/articulo/nuevo}">Nuevo Articulo</a>
+            <div th:if="${articulo != null and !articulo.empty}">
+                <table border = "1">
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Existencias</th>
+                            <th>Activa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="item : ${articulos}">
+                            <td th:text="${articulo.description"></td>
+                            <td th:text="${#numbers.formatDecimal(articulo.precio, 3, 2)}" style="text-align: rigth"></td>
+                            <td th:text="${articulo.existencias}" style="text-align: center"></td>
+                            <td><input type="checkbox" name="activa" th:checked="${articulo.activo}" disabled="true"/></td>
+                            <td><a th:href="@{/articulo/eliminar} + ${articulo.idArticulo}"> Eliminar</a></td>
+                            <td><a th:href="@{/articulo/modificar} + ${articulo.idArticulo}"> Modificar</a></td>
+                        </tr>
+                    </tbody>                  
+                </table>
+                <div th:if="${articulos == null or articulos.empty}">
+                    No tenemos articulos disponibles...
+                </div>    
+            </div>
+            <footer th:replace="layout/platilla :: footer" />
     </body>
 </html>
