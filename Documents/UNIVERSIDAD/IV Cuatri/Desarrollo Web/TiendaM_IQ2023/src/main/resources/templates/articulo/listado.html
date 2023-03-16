@@ -8,9 +8,9 @@
     <body>
         <header th:replace="layout/platilla :: header" />
         <div class="contenido">
-            <h2>Listado de articulos</h2>
-            <a th:href="@{/articulo/nuevo}">Nuevo Articulo</a>
-            <div th:if="${articulo != null and !articulo.empty}">
+            <h2>Listado de articulos</h2><br/><br/>
+            <a th:href="@{/articulo/nuevo}">Nuevo Articulo</a><br/><br/>
+            <div th:if="${articulos != null and !articulos.empty}">
                 <table border = "1">
                     <thead>
                         <tr>
@@ -22,17 +22,17 @@
                     </thead>
                     <tbody>
                         <tr th:each="item : ${articulos}">
-                            <td th:text="${articulo.description"></td>
-                            <td th:text="${#numbers.formatDecimal(articulo.precio, 3, 2)}" style="text-align: rigth"></td>
-                            <td th:text="${articulo.existencias}" style="text-align: center"></td>
-                            <td><input type="checkbox" name="activa" th:checked="${articulo.activo}" disabled="true"/></td>
-                            <td><a th:href="@{/articulo/eliminar} + ${articulo.idArticulo}"> Eliminar</a></td>
-                            <td><a th:href="@{/articulo/modificar} + ${articulo.idArticulo}"> Modificar</a></td>
+                            <td th:text="${item.descripcion}"></td>
+                            <td th:text="${#numbers.formatDecimal(item.precio, 3, 2)}" style="text-align: rigth"></td>
+                            <td th:text="${item.existencias}" style="text-align: center"></td>
+                            <td><input type="checkbox" name="activa" th:checked="${item.activo}" disabled="true"/></td>
+                            <td><a th:href="@{/articulo/eliminar/} + ${item.idArticulo}">Eliminar</a></td>
+                            <td><a th:href="@{/articulo/modificar/} + ${item.idArticulo}">Modificar</a></td>
                         </tr>
                     </tbody>                  
                 </table>
-                <div th:if="${articulos == null or articulos.empty}">
-                    No tenemos articulos disponibles...
+                <div th:if="${articulos == null or articulos.empty}"><br/><br/>
+                    No tenemos mas articulos disponibles...
                 </div>    
             </div>
             <footer th:replace="layout/platilla :: footer" />

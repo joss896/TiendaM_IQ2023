@@ -8,8 +8,8 @@
     <body>
         <header th:replace="layout/platilla :: header" />
         <div class="contenido">
-            <h2>Listado de clientes</h2>
-            <a th:href="@{/categoria/nueva}">Nueva categoria</a>
+            <h2>Categorías</h2><br/><br/>
+            <a th:href="@{/categoria/nuevo}">Nueva categoria</a><br/><br/>
             <div th:if="${categorias != null and !categorias.empty}">
                 <table border = "1">
                     <thead>
@@ -19,17 +19,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="item : ${categoria}">
-                            <td th:text="${categoria.descripcion}"></td>
-                            <td><input type="checkbox" name="activa" th:checked="${categoria.activo}" disable="true"></td>
+                        <tr th:each="item : ${categorias}">
+                            <td th:text="${item.descripcion}"></td>
+                            <td><input type="checkbox" name="activa" th:checked="${item.activo}" disable="true"></td>
                             <td><a th:href="@{/categoria/eliminar/} + ${item.idCategoria}">Eliminar</a></td>
                             <td><a th:href="@{/categoria/modificar/} + ${item.idCategoria}">Modificar</a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div th:if="${clientes == null or clientes.empty}">
-                No tenemos clientes que mostrar...
+            <div th:if="${clientes == null or clientes.empty}"><br/><br/>
+                Estas son todas nuestras categorías...
             </div> 
             <footer th:replace="layout/platilla :: footer" />
     </body>

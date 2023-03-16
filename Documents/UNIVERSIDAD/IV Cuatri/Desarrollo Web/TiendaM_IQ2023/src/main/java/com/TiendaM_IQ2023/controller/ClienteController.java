@@ -19,6 +19,8 @@ public class ClienteController {
     public String inicio(Model model) {
 
         var clientes = clienteService.getClientes();
+        //var clientes = clienteService.getClientePorNombre("Luis");
+        //var clientes = clienteService.getClientesPorApellidosLike("A%");
         model.addAttribute("clientes", clientes);
         return "/cliente/listado";
     }
@@ -27,8 +29,13 @@ public class ClienteController {
     public String nuevocliente(Cliente cliente) {
         return "/cliente/modificar";
     }
+    
+    @GetMapping("/cliente/buscar")
+    public String buscarcliente(Cliente cliente){
+        return "redirect:/cliente/buscar";
+    }
 
-    @PostMapping("//cliente/guardar")
+    @PostMapping("/cliente/guardar")
     public String guardarCliente(Cliente cliente) {
         clienteService.save(cliente);
         return "redirect:/cliente/listado";

@@ -28,7 +28,7 @@ public class CategoriaController {
         return "/categoria/modificar";
     }
 
-    @PostMapping("//categoria/guardar")
+    @PostMapping("/categoria/guardar")
     public String guardarCategoria(Categoria categoria) {
         categoriaService.save(categoria);
         return "redirect:/categoria/listado";
